@@ -1,0 +1,2 @@
+class Execpcion(Exception):
+    pass
