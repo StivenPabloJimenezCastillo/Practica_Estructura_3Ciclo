@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">EMITIR FACTURA</span></h5>
+    <form id="form" action="/factura/guardar" method="post" role="form">
+      <p><button id="boton" class="w3-button w3-black" type="submit">EMITIR</button></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="NOMBRE" required name="nombre"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="APELLIDO" required name="apellido"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="CEDULA" required name="cedula"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="VALOR $" required name="valor"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="CODIGO RUC" required name="numRuc"></p>
+      <p><select name="tipoRuc" id="tipoRuc" class="w3-input w3-padding-16 w3-border">
+        <optgroup label="TIPO DE RUC:">
+          <option value="EDUCATIVO">EDUCATIVO</option>
+          <option value="PROFECIONAL">PROFECIONAL</option>
+        </optgroup>
+      </select></p>
+    </form>
+  </div>
+</div>
+{% endblock %}

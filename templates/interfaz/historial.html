@@ -1,0 +1,36 @@
+{% extends "template.html" %}
+{% block content %}
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+    <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">HISTORIAL DE FACTURAS</span></h5>
+    <table id="Tabla" class="w3-table-all w3-hoverable w3-centered">
+        <thead>
+            <tr class="w3-light-grey">
+                <th>Cliente</th>
+                <th>Cédula</th>
+                <th>RUC</th>
+                <th>Tipo de RUC</th>
+                <th>Valor</th>
+                <th>Retención</th>
+                <th>Valor Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in lista %}
+            <tr>
+                <td>{{ item.apellido }} {{ item.nombre }}</td>
+                <td>{{ item.cedula }}</td>
+                <td>{{ item.numRuc }}</td>
+                <td>{{ item.tipoRuc }}</td>
+                <td>{{ item.valor }}</td>
+                <td>{{ item.retencion }}</td>
+                <td>{{ item.total }}</td>
+                
+            </tr>
+
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
